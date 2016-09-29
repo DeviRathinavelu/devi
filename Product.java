@@ -2,6 +2,8 @@ package com.devi.bags.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
@@ -14,6 +16,12 @@ public class Product {
 	private String Id;
 	private String Name;
 	private int price;
+	@ManyToOne
+	@JoinColumn(name="category_id",insertable=false,updatable=false,nullable=false)
+	private Category category;
+	@ManyToOne
+	@JoinColumn(name="supplier_id",insertable=false,updatable=false,nullable=false)
+	private Supplier supplier;
 	public String getId() {
 		return Id;
 	}
