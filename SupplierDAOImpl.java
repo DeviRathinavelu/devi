@@ -1,4 +1,6 @@
 package com.devi.bags.dao;
+import java.util.List;
+
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -45,6 +47,10 @@ public class SupplierDAOImpl implements SupplierDAO {
 		Supplier SupplierToDelete = new Supplier();
 		SupplierToDelete.setId(id);
 			sessionFactory.getCurrentSession().delete(SupplierToDelete);
+	}
+
+	public List<Supplier> list() {
+		return null;
 	}
 
 }

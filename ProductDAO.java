@@ -8,8 +8,9 @@ public interface ProductDAO {
 	public boolean save(Product product);	
     public boolean update(Product product);
     public void delete(String id);
-    public ProductDAO get(String id);
-    public List<ProductDAO>list();
+    public Product get(String id);
+    public List<Product>list();
 
 }
+
 
